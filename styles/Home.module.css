@@ -48,8 +48,9 @@
   color: rgb(68, 68, 196);
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  padding: 30px 90px 0px 90px;
-  margin-top: -174px;
+  padding: 00px 90px 0px 90px;
+  position: relative;
+  top: -70px;
 }
 
 .firstcol h1{
@@ -68,10 +69,28 @@
   text-align: center;
   width: 450px;
 }
+.seccol {
+  padding: 0px;
+}
+
+.mainForm{
+  display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 52px;
+    height: 450px;
+    background-color: blue;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
 
 .seccol img {
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  right: 128px;
+  top: 120px;
 }
 .main {
   padding: 5rem 0;

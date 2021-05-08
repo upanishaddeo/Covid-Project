@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Nav from './Nav.js'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
     return (
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
                     {children}
                 </main>
             </div>
+            <Footer />
         </>
 
     )
