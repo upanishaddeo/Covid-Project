@@ -177,10 +177,84 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+.navText{
+  list-style-type: none;
+  color: rgb(68, 68, 196);
+  padding-top: 30px;
+}
+.spanTitle{
+font-family: 'Poppins', sans-serif;
+padding: 0px 55px 0px 0px; 
+}
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
-  }
+    }
+  .firstcol{
+    color: rgb(68, 68, 196);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500px;
+    padding: 50px 90px 0px 270px;
+    margin-top: -50px;
+   }
+  .afinozLogo {
+    margin: 0px 60px 0px 20px;
+   }
+   .sideNav{
+    color: rgb(68, 68, 196);
+    float: right;
+    margin: -72px -280px 35px 0px;
+    height: 39px;
+    width: 148px !important;
+   }
+   .mainNav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 70px;
+    font-size: 30px;
+   }
+   .navMenu{
+     background-color: #fafafa;
+     width:100%;
+     height: 80vh; 
+     position: fixed; 
+     top: 0;
+     top: 100%; 
+     transition: 100ms;
+   }
+   .active{
+     left: 0;
+     transition: 358ms;
+   }
+   .navMenuItems{
+    width: 533px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   }
+   .navbarToggle{
+     background-color: #fafafa;
+     width: 100%;
+     height: 80px;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+   }
+   .span{
+     margin-left: 16px;
+   }
+   .mainNav:hover{
+     background-color: rgb(68, 68, 196);
+     color: white;
+      width: 500px;
+     border-radius: 70px;
+     text-align: center; 
+   }
+
 }
