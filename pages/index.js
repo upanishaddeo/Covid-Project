@@ -54,44 +54,47 @@ export default function Home() {
   const [tooltipContent, setTooltipContent] = useState("");
 
   const [stateData, updateData] = useState([]);
+  const [countryData, totalCountryData] = useState([]);
   const getHeatMapData = [
+    { id: "AN", state: "Andaman and Nicobar Islands", value: "" },
     { id: "AP", state: "Andhra Pradesh", value: "" },
     { id: "AR", state: "Arunachal Pradesh", value: "" },
     { id: "AS", state: "Assam", value: "" },
     { id: "BR", state: "Bihar", value: "" },
+    { id: "CH", state: "Chandigarh", value: "" },
     { id: "CT", state: "Chhattisgarh", value: "" },
+    { id: "DN", state: "Dadra and Nagar Haveli", value: "" },
+    { id: "DL", state: "Delhi", value: "" },
     { id: "GA", state: "Goa", value: "" },
     { id: "GJ", state: "Gujarat", value: "" },
     { id: "HR", state: "Haryana", value: "" },
     { id: "HP", state: "Himachal Pradesh", value: "" },
+    { id: "JK", state: "Jammu and Kashmir", value: "" },
     { id: "JH", state: "Jharkhand", value: "" },
     { id: "KA", state: "Karnataka", value: "" },
     { id: "KL", state: "Kerala", value: "" },
+    { id: "LA", state: "Ladakh", value: "" },
+    { id: "LD", state: "Lakshadweep", value: "" },
     { id: "MP", state: "Madhya Pradesh", value: "" },
     { id: "MH", state: "Maharashtra", value: "" },
     { id: "MN", state: "Manipur", value: "" },
     { id: "ML", state: "Meghalaya", value: "" },
     { id: "MZ", state: "Mizoram", value: "" },
     { id: "NL", state: "Nagaland", value: "" },
-    { id: "OR", state: "Odisha", value: "" },
+    { id: "OD", state: "Odisha", value: "" },
+    { id: "PY", state: "Puducherry", value: "" },
     { id: "PB", state: "Punjab", value: "" },
     { id: "RJ", state: "Rajasthan", value: "" },
     { id: "SK", state: "Sikkim", value: "" },
     { id: "TN", state: "Tamil Nadu", value: "" },
-    { id: "TG", state: "Telangana", value: "" },
+    { id: "TS", state: "Telangana", value: "" },
     { id: "TR", state: "Tripura", value: "" },
-    { id: "UT", state: "Uttarakhand", value: "" },
+    { id: "UK", state: "Uttarakhand", value: "" },
     { id: "UP", state: "Uttar Pradesh", value: "" },
     { id: "WB", state: "West Bengal", value: "" },
-    { id: "AN", state: "Andaman and Nicobar Islands", value: "" },
-    { id: "CH", state: "Chandigarh", value: "" },
     { id: "DN", state: "Dadra and Nagar Haveli", value: "" },
-    { id: "DD", state: "Daman and Diu", value: "" },
-    { id: "DL", state: "Delhi", value: "" },
-    { id: "JK", state: "Jammu and Kashmir", value: "" },
-    { id: "LA", state: "Ladakh", value: "" },
-    { id: "LD", state: "Lakshadweep", value: "" },
-    { id: "PY", state: "Puducherry", value: "" },
+  
+  
   ];
 
   const colorScale = scaleQuantile()
@@ -100,7 +103,7 @@ export default function Home() {
 
   const onMouseEnter = (geo, current = { value: "NA" }) => {
     return () => {
-      setTooltipContent(`${geo.properties.name}: ${current.value}`);
+      setTooltipContent(`${"Covid Case in "+geo.properties.name}: ${current.value}`);
     };
   };
 
@@ -114,7 +117,7 @@ export default function Home() {
       .then((resp) => resp.json())
       .then((res) => {
         console.log("this is the response", res.data);
-
+        totalCountryData(res.data.summary)
         updateData(res.data.regional);
       })
       .catch((err) => {
@@ -127,8 +130,20 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="full-width-height container">
+    <div className="row covid-container">
+     <div className="col m6 country-data">
+     Covid-19 Stats (India) As of Today
+     </div>
+     <ul>
+  <li>Total Covid 19 Cases {countryData.total/1000000} Cr.</li>
+       <li>Conform Case India {countryData.confirmedCasesIndian/1000000} Cr.</li>
+       <li>Conform Case Foreign {countryData.confirmedCasesForeign}</li>
+       <li>Total Recover Cases {countryData.discharged/1000000} Cr.</li>
+       <li>Total Deaths Caese {countryData.deaths/100000} Lk.</li>
+     </ul>
+    <div className="col m6 full-width-height container">
       <h1 className="no-margin center">States and UTs</h1>
+    <div className="covid-map">
       <ReactTooltip>{tooltipContent}</ReactTooltip>
       <ComposableMap
         projectionConfig={PROJECTION_CONFIG}
@@ -141,6 +156,7 @@ export default function Home() {
           <Geographies geography={INDIA_TOPO_JSON}>
             {({ geographies }) =>
               geographies.map((geo, index) => {
+                
                 getHeatMapData[0].value = stateData[0].confirmedCasesIndian;
                 getHeatMapData[1].value = stateData[1].confirmedCasesIndian;
                 getHeatMapData[2].value = stateData[2].confirmedCasesIndian;
@@ -177,10 +193,9 @@ export default function Home() {
                 getHeatMapData[33].value = stateData[33].confirmedCasesIndian;
                 getHeatMapData[34].value = stateData[34].confirmedCasesIndian;
                 getHeatMapData[35].value = stateData[35].confirmedCasesIndian;
-                // getHeatMapData[36].value =stateData[36].confirmedCasesIndian
-                // getHeatMapData[37].value =stateData[37].confirmedCasesIndian
 
                 const current = getHeatMapData.find((s) => s.id === geo.id);
+                
 
                 return (
                   <Geography
@@ -197,10 +212,12 @@ export default function Home() {
           </Geographies>
         )}
       </ComposableMap>
+      </div>
       {/* <LinearGradient data={gradientData} /> 
       <div className="center">
         <button className="mt16" onClick={onChangeButtonClick}>Change</button>
       </div> */}
+    </div>
     </div>
   );
 }

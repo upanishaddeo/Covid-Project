@@ -48,8 +48,8 @@
   color: rgb(68, 68, 196);
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  padding: 30px 90px 0px 90px;
-  margin-top: -174px;
+  padding: 401px 133px 0px 111px;
+  margin-top: 196px;
 }
 
 .firstcol h1{
@@ -70,8 +70,9 @@
 }
 
 .seccol img {
-  width: 300px;
-  height: 200px;
+  width: 670px;
+    margin-top: 543px;
+    margin-left: -115px;
 }
 .main {
   padding: 5rem 0;
@@ -178,14 +179,66 @@
   margin-left: 0.5rem;
 }
 .navText{
-  list-style-type: none;
-  color: rgb(68, 68, 196);
-  padding-top: 30px;
+    list-style-type: none;
+    color: rgb(68, 68, 196);
+    padding-top: 30px;
+    font-weight: bold;   
+}
+.spanTitle::after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: rgb(68, 68, 196);;
+  transition: width .3s;
+}
+.spanTitle:hover::after{
+  width: 100%;
+  transition: width .3s;
 }
 .spanTitle{
-font-family: 'Poppins', sans-serif;
-padding: 0px 55px 0px 0px; 
+  font-family: 'Poppins', sans-serif;
+  padding: 0px 70px 0px 0px; 
 }
+
+.secRowFirstCol{
+  padding-top: 30px;
+  padding-left: 80px;
+}
+.secRowFirstCol img{
+  height: 512px;
+  width: 543px;
+  margin-top: 20px;
+}
+.secRowSecCol{
+  color: rgb(68, 68, 196);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 128px 163px 70px 31px;
+  
+}
+.secRowSecCol h1{
+  color: rgb(68, 68, 196);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.secRowSecCol p{
+  color: rgb(92, 92, 92);
+}
+.applyDiv{
+  background-color: rgb(68, 68, 196);
+    border-radius: 25px;
+    text-align: center;
+    width: 222px;
+    padding: 10px;
+    color: white;
+}
+
+
+
+
+
 
 @media (max-width: 600px) {
   .grid {

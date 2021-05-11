@@ -29,6 +29,23 @@ a {
   padding: 16px;
 }
 
+.covid-map {
+  width:1150px;
+}
+
+.covid-container {
+  background: url("../public/covid-upper.png");
+  width: 1275px;
+  height: 500px;
+ 
+
+}
+
+.country-data ul  {
+  
+ 
+}
+
 .no-margin {
   margin: 0;
 }
