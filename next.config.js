@@ -1,36 +1,41 @@
-
-global.prod = "production";
-
-  module.exports = {
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-      // Note: we provide webpack above so you should not `require` it
-      // Perform customizations to webpack config
-      config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//))
-  
-      // Important: return the modified config
-      return config
-    },
-  }
-
-
-  module.exports = {
-    env: {
-        production: 'https://backend.afinoz.com',
-        development:'http://13.127.98.247:8080'
-    },
-  }
-
-
-function getBasePathForAwsData() {
-    return "http://d1bz2uaiqgodxb.cloudfront.net/data";
-
+// global.prod = "production";
+module.exports = {
+  env: {
+    development:"http://13.127.98.247:8080",
+    production:"https://backend.afinoz.com"
+  },
 }
 
-function getBasePathForS3Urs() {
-    return "https://s3.ap-south-1.amazonaws.com/afinoz.static/";
-} 
 
-module.exports ={
-  getBasePathForAwsData,
-  getBasePathForS3Urs
-}
+
+// Example config for adding a loader that depends on babel-loader
+// module.exports = {
+//   webpack: (config, options) => {
+//     config.module.rules.push({
+//       test: /\.mdx/,
+//       use: [
+//         options.defaultLoaders.babel,
+//         {
+//           loader: "@mdx-js/loader",
+//           options: pluginOptions.options,
+//         },
+//       ],
+//     });
+
+//     return config;
+//   },
+// };
+
+// module.exports = (config, { dev }) => {
+//     config.module.rules.push({
+//       test: [/\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+//       loader: "file-loader",
+//       options: {
+//         name: "public/media/[name].[ext]",
+//         publicPath: (url) => url.replace(/public/, ""),
+//       },
+//     });
+//     return withCss(config);
+//   };
+
+

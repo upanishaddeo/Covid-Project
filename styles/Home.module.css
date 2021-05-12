@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .nav {
@@ -47,10 +46,8 @@
 .firstcol{
   color: rgb(68, 68, 196);
   font-family: 'Poppins', sans-serif;
+  padding: 0px 100px;
   font-weight: 500;
-  padding: 00px 90px 0px 90px;
-  position: relative;
-  top: -70px;
 }
 
 .firstcol h1{
@@ -112,11 +109,9 @@
     left: 99px;
 }
 .seccol img {
-  width: 600px;
-  height: 500px;
-  position: absolute;
-  right: 128px;
-  top: 120px;
+  width: 670px;
+    margin-top: -60px;
+    margin-left: -93px;
 }
 .main {
   padding: 5rem 0;
@@ -149,8 +144,8 @@
 }
 .backgroundImage{
   left: -145px;
+  margin-top: 133px;
   position: absolute;
-  top: 1031px;
 }
 
 .footerHeading span {
@@ -314,10 +309,142 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+.navText{
+    list-style-type: none;
+    color: rgb(68, 68, 196);
+    padding-top: 30px;
+}
+.spanTitle::after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: rgb(68, 68, 196);;
+  transition: width .3s;
+}
+.spanTitle:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+.spanTitle{
+  font-family: 'Poppins', sans-serif;
+  padding: 0px 70px 0px 0px; 
+}
+
+.secRowFirstCol{
+  padding-top: 30px;
+  padding-left: 80px;
+}
+.secRowFirstCol img{
+  height: 512px;
+  width: 543px;
+  margin-top: 20px;
+}
+.secRowSecCol{
+  color: rgb(68, 68, 196);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 128px 163px 70px 31px;
+  
+}
+.secRowSecCol h1{
+  color: rgb(68, 68, 196);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.secRowSecCol p{
+  color: rgb(92, 92, 92);
+}
+.applyDiv{
+  background-color: rgb(68, 68, 196);
+    border-radius: 25px;
+    text-align: center;
+    width: 222px;
+    padding: 10px;
+    color: white;
+}
+
+
+
+@media (max-width: 1300px) {
+  .sideNav{
+    color: rgb(68, 68, 196);
+    margin: -70px 0px 0px 0px;
+    height: 39px;
+    width: 148px !important;
+    float: right;
+   }
+}
+
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
-  }
+    }
+  .firstcol{
+    color: rgb(68, 68, 196);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500px;
+    padding: 50px 90px 0px 270px;
+    margin-top: -50px;
+   }
+  .afinozLogo {
+    margin: 0px 60px 0px 20px;
+   }
+   .sideNav{
+    color: rgb(68, 68, 196);
+    margin: -68px 0px 0px 0px;
+    height: 32px;
+    width: 148px !important;
+   }
+   .mainNav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 70px;
+    font-size: 30px;
+   }
+   .navMenu{
+     background-color: #fafafa;
+     width:100%;
+     height: 80vh; 
+     position: fixed; 
+     top: 0;
+     top: 100%; 
+     transition: 100ms;
+   }
+   .active{
+     left: 0;
+     transition: 358ms;
+   }
+   .navMenuItems{
+    width: 533px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   }
+   .navbarToggle{
+     background-color: #fafafa;
+     width: 100%;
+     height: 80px;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+   }
+   .span{
+     margin-left: 16px;
+   }
+   .mainNav:hover{
+     background-color: rgb(68, 68, 196);
+     color: white;
+      width: 500px;
+     border-radius: 70px;
+     text-align: center; 
+   }
+
 }
