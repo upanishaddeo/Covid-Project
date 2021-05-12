@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
 import { faAngleDown, faBars} from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 import React, { useState } from 'react'
-import { SidebarData } from './sideBardata';
+import { SidebarData } from './sideBardata.js';
 
 const Nav = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -51,7 +51,7 @@ const Nav = () => {
             </div>
 
 
-            <div className="d-lg-none ">
+            <div className="d-lg-none">
                 <div classname={styles.navbar}>
                     <div className={styles.afinozLogo}>
                         <Link href='/'><Image src='/afinoz_logo.svg' width={150} height={90} /></Link>

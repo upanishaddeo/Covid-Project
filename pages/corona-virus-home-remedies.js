@@ -25,7 +25,7 @@ const coronaVirusHomeRemedies = () => {
 
             </Col>
             <Col md={6} className={styles.seccol}>
-               <img src="/art1.png" />
+               <img src="/art1@3x.png" />
             </Col>
         </Row> 
         <Row>
