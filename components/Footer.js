@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col , Spinner} from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal'
+import Modal from 'react-bootstrap/Modal';
+import axios from "axios";
 import footerStyles from '../styles/Home.module.css';
 import { Regex } from "../components/utility";
 
@@ -136,11 +137,37 @@ class Footer extends Component {
         }
     
         if (validate() && fillValue()) {
-          
          alert("data upload sucessfully")
+         
+        fetch("http://13.127.98.247:8080/api/", {
+
+          method: "post",
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+              
+          },
+
+          body: JSON.stringify({
+            f_name: data.f_name.value,
+            l_name: data.l_name.value,
+            mobile_number: data.phone_no.value,
+            email: data.email.value,
+            company_name: data.company.value,
+            monthly_salary: data.m_salary.value,
+            loan_amount: data.l_amount.value
+          })
+
+      })
+       
+          .then((response) => {
+            if(response){
+            console.log("this is the response",response)
+          
           this.setState({loader:true})
           this.handleShow()
-        } else {
+        } 
+      else {
           Object.keys(data).map((item) => {
             if (
               (data[item].error == "" || data[item].error == null) &&
@@ -150,10 +177,14 @@ class Footer extends Component {
               data[item].error = "*Required";
             }
           });
-    
+        
           this.setState(data);
         }
-      };
+      
+      })
+    }
+  }
+    
 
 
 
