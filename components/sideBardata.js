@@ -11,7 +11,7 @@ export const SidebarData = [
     },
     {
         title: 'Plasma',
-        path: '/Plasma'
+        path: '/plasma'
     },
     {
         title: 'Oxygen',

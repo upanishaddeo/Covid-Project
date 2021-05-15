@@ -7,8 +7,10 @@ import { faAngleDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 const coronaVirusHomeRemedies = () => {
     return (
         <>
-        <Row>
+        <Row className={styles.mainRowMargin}>
             <Col md={6} className={styles.firstcol}>
+                <img className={styles.covidImageBack} src="/covidVirusBack.png" />
+                
                 <h1>HERO HEADING</h1>
                 <p>Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer took
@@ -26,15 +28,18 @@ const coronaVirusHomeRemedies = () => {
             </Col>
             <Col md={6} className={styles.seccol}>
                <img src="/art1@3x.png" />
+               <img className={styles.covidImageBack2} src="/covidVirusBack.png" />
             </Col>
         </Row> 
-        <Row>
-            <Col md={6} className={styles.secRowFirstCol}>
-            <img src="/second.png" />
-            </Col>
-            <Col md={6} className={styles.secRowSecCol}>
-            <h1>HERO HEADING</h1>
-                <p>Lorem Ipsum has been the industry's standard dummy
+        <Row className={styles.secPageMargin}>
+                <div className="d-none d-lg-block divRow">
+                    <Col md={6} className={styles.secRowFirstCol}>
+                        <img src="/second.png" />
+                    </Col>
+                </div>
+                <Col md={6} className={styles.secRowSecCol}>
+                    <h1>HERO HEADING</h1>
+                    <p>Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer took
                     a galley of type and scrambled it to make a type
                     specimen book. It has survived not only five centuries,
@@ -45,10 +50,17 @@ const coronaVirusHomeRemedies = () => {
                     software like Aldus PageMaker including versions
                     of Lorem Ipsum.
                 </p>
-                <div className={styles.applyDiv}>APPLY</div>
-            </Col>
+                    <div className={styles.applyDiv}>APPLY</div>
+                    <img className={styles.covidImageBack3} src="/covidVirusBack.png" />
+                </Col>
+                < div className="d-lg-none ">
+                    <Col md={6} className={styles.secRowFirstCol}>
+                        <img src="/second.png" />
+                    </Col>
+                </div>
 
-        </Row>  
+
+            </Row>
         </>
     )
 }

@@ -12,13 +12,16 @@
 .nav {
   background-color: rgb(255, 255, 255);
   display: flex;
+  width: 100vw;
+  height: 80px;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0px 30px;
+  align-items: center;
+  padding: 0px 120px;
 }
 
 .afinozLogo {
- margin: 0px 60px 0px 60px;
+  margin: 0px 147px 0px -30px;
 }
 
 .iconColor {
@@ -43,10 +46,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.mainRowMargin{
+  margin-top: 100px;
+}
+
 .firstcol{
   color: rgb(68, 68, 196);
   font-family: 'Poppins', sans-serif;
-  padding: 0px 100px;
+  padding: 60px 100px;
   font-weight: 500;
 }
 
@@ -60,11 +67,20 @@
   color: rgb(92, 92, 92);
 }
 .searchDiv{
-  background-color: rgb(130, 155, 226);
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    width: 450px;
+    border: 1px solid #4444c4;
+}
+.searchDiv:hover{
+  background-color: #a6a6e8;
   padding: 10px;
+  color: white !important;
   border-radius: 25px;
   text-align: center;
   width: 450px;
+  border: 1px solid #a6a6e8;
 }
 .seccol {
   padding: 0px;
@@ -108,13 +124,22 @@
     margin-top: 17px;
     left: 99px;
 }
+.secPageMargin{
+  margin: 50px 0px;
+}
+.covidImageBack3 {
+  width: 414px;
+  position: absolute;
+  bottom: -942px;
+  right: -140px;
+  z-index: -1;
+}
 .seccol img {
-  width: 670px;
-    margin-top: -60px;
+  width: 640px;
+    margin-top: 11px;
     margin-left: -93px;
 }
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -138,9 +163,25 @@
 
 .footerHeading{
   font-size: 30px;
-  font-family: 'Poppins', sans-serif;
-  color: #4A5DC5;
-  padding-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #4A5DC5;
+    padding-top: 30px;
+    margin-top: 0px;
+}
+.covidImageBack{
+  position: absolute;
+  width: 350px;
+  left: -163px;
+  z-index: -10;
+  bottom: -288px;
+}
+.covidImageBack2 {
+  position: absolute;
+  width: 352px !important;
+  margin: 0px !important;
+  right: -121px;
+  top: -11px;
+  z-index: -1;
 }
 .backgroundImage{
   left: -145px;
@@ -365,8 +406,222 @@
     color: white;
 }
 
+/* Covid Card Css */
 
 
+.FundCard{
+    width: 300px;
+    border-radius: 5px;
+    border: 0.9px solid #d3cdcd;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 18px 0px #8a96ca;
+}
+
+.fundHeading p{
+  font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.fundHeading{
+  margin: 10px;
+  color: #595959;
+  border-bottom: 1px solid #c4c0c0;
+}
+.fundImage img {
+  height: auto;
+    width: 100%;
+    border-radius: 2px 2px 0px 0px;
+}
+
+.fundData{
+  margin: 10px;
+}
+
+.fundImage {
+  box-shadow: 0px 0px 20px 0px #727272;
+}
+
+.fundTarget{
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #595959;
+  margin: 0px 0px 10px 0px;
+}
+
+.fundTarget span {
+  color: black;
+  font-weight: 600;
+}
+
+.fundAmount{
+  font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #009318;
+}
+.fundAmount span{
+  font-weight: 600;
+}
+
+.donateButton{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgb(255 255 255);
+    padding: 10px;
+    border: 1px solid rgb(68 68 196);
+    color: rgb(68 68 196);
+}
+
+
+/* Plasma main route donation page starts */
+
+.plasmaBody{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    padding-top: 80px;
+}
+
+.plasmaHeading{
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.plasmaHeading h1{
+  font-size: 25px;
+  color: rgb(68, 68, 196);
+}
+
+.mainContainer{
+  border-radius: 10px;
+  box-shadow: -1px 2px 13px #797979;
+  margin: 0px 200px 0px 200px;
+}
+.plasmaImage{
+  width: 840px;
+  border-radius: 10px 10px 0px 0px;
+  height: 237px;
+  overflow: hidden;
+}
+.plasmaImage img {
+  width: 100%;
+  position: relative;
+  top: -75px;
+}
+.checkboxMargin {
+  display: flex;
+  align-items: center;
+}
+.checkboxMargin input {
+  margin-right: 10px;
+}
+.checkboxMargin div {
+  margin-right: 10px;
+}
+.firstColPlasma{
+  margin: 14px 0px 18px 50px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.secColPlasma{
+  margin: 14px 50px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+
+.firstColflex2 input {
+  width: 300px;
+    margin-top: 10px;
+    border-style: none;
+    box-shadow: 0px 0px 6px #abb7fa;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    color: #656565;
+}
+.secColflex1 input{
+  width: 300px;
+  margin-top: 10px;
+  border-style: none;
+  box-shadow: 0px 0px 6px #abb7fa;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+.secColflex1 select {
+  width: 300px;
+    margin-top: 10px;
+    border-style: none;
+    box-shadow: 0px 0px 6px #abb7fa;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #656565;
+    background-color: transparent;
+    padding-left: 10px;
+}
+.firstColflex1{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.firstColflex1 p {
+  margin: 0px !important;
+  font-weight: 600;
+  color: rgb(68, 68, 196);
+}
+.firstColflex2{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.firstColflex2 label {
+  color: rgb(68, 68, 196);
+  font-weight: 600;
+}
+.secColflex1 label{
+  font-weight: 600;
+  color: rgb(68, 68, 196);
+}
+.secColflex1{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.submitButtonPlasma{
+  padding: 10px 33px 10px 33px;
+    border-radius: 20px;
+    border-style: none;
+    color: rgb(68, 68, 196);
+    background-color: transparent;
+    border: 1px solid rgb(68, 68, 196);
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-top: 27px;
+}
+.submitButtonPlasma:hover{
+  padding: 10px 33px 10px 33px;
+  border-radius: 20px;
+  border-style: none;
+  color: white;
+  text-transform: uppercase;
+  font-style: 13px;
+  background-color: rgb(68, 68, 196);
+  box-shadow: 0px 2px 20px 0px #b0b7d9;
+  border: 1px solid rgb(68, 68, 196);
+}
 @media (max-width: 1300px) {
   .sideNav{
     color: rgb(68, 68, 196);
