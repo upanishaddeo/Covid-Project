@@ -7,7 +7,7 @@ export const SidebarData = [
     },
     {
         title: 'RT-PCR',
-        path: '/rt-pcr'
+        path: '/rtp-cr-test-near-me'
     },
     {
         title: 'Plasma',
@@ -22,3 +22,4 @@ export const SidebarData = [
         path: '/Covid-19-admission'
     }
 ]
+

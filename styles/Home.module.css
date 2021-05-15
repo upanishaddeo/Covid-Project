@@ -123,6 +123,11 @@
     color: #4A5DC5;
     margin-top: 17px;
     left: 99px;
+    cursor: pointer;
+}
+
+.modal-content {
+  
 }
 .secPageMargin{
   margin: 50px 0px;
@@ -244,6 +249,9 @@
     padding: 8px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+}
+.inputError {
+  border: 2px solid red !important;
 }
 .flex2{
   display: flex;
