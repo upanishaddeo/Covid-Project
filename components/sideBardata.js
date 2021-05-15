@@ -22,3 +22,4 @@ export const SidebarData = [
         path: '/Covid-19-admission'
     }
 ]
+

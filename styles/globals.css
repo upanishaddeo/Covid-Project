@@ -66,4 +66,9 @@ a {
 .mt16 {
   margin-top: 16px;
 }
+.pincode{
+  border: 2px solid red;
+    width: 30%;
+}
+
 
