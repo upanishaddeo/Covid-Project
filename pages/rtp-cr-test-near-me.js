@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import router from "next/router";
+import  { rtpcrDatagovt,pvtData }  from "../components/rtpcr-data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { faAngleDown, faBars} from "@fortawesome/free-solid-svg-icons"; 
+
 export default class rrtpCrTestNearMe extends Component {
   constructor(props) {
     super(props);
@@ -39,33 +42,37 @@ export default class rrtpCrTestNearMe extends Component {
   };
   render() {
     let pinError = this.state.pinError;
+  
+   
     return (
-      <div>
-        <div>
-          Enter your pincode to know RTPCR test location {this.state.district}
+      <div style={{marginTop:"100px"}}>
+        <div>Government Testing Centers</div>
+       
+          {
+          rtpcrDatagovt.map((item,index)=>{
+            return(
+            <div>
+             {item.name}
+             {item.p_number}
+             <a href={item.geo_loc} target="_blank"><FontAwesomeIcon icon={faBars} ></FontAwesomeIcon></a>
+            </div>
+            )
+          })
+       
+  } 
+   <div>Private Testing Centers</div>
+         {
+          pvtData.map((item,index)=>{
+            return(
+            <a href={item.geo_loc} target="_blank"><div>
+             {item.name}
+             {item.p_number}
+            </div></a>
+            )
+          })
+       
+  } 
         </div>
-        <div className={pinError.length > 0 ? "pincode" : ""}>
-          <input
-            className={pinError.length > 0 ? "pincode" : ""}
-            type="text"
-            placeholder="Enter Pincode..."
-            maxLength="6"
-            name="p_code"
-            onChange={(e) => this.handlePin(e)}
-          />
-        </div>
-
-        <a
-          target="_blank"
-          href={
-            "https://www.google.com/maps/search/rt+pcr+test+in+" +
-            this.state.district +
-            "/@28.5842868,77.314701,14z/data=!3m1!4b1?hl=en"
-          }
-        >
-          <img src="./rtpcr-noida.png" />
-        </a>
-      </div>
     );
   }
 }

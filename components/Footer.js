@@ -104,7 +104,6 @@ class Footer extends Component {
             data[name].error = "";
           }
         }
-        console.log("kkkkkkkk",data)
       };
 
       //*Form Submmit
@@ -137,11 +136,9 @@ class Footer extends Component {
         }
     
         if (validate() && fillValue()) {
-         alert("data upload sucessfully")
-         
+        this.setState({loader:true})
         fetch("http://13.127.98.247:8080/api/", {
-
-          method: "post",
+         method: "post",
           headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
@@ -162,10 +159,20 @@ class Footer extends Component {
        
           .then((response) => {
             if(response){
+              
+              this.setState({loader:false})
             console.log("this is the response",response)
-          
-          this.setState({loader:true})
-          this.handleShow()
+            
+          setTimeout(() => {
+            this.handleShow();
+          }, 500);
+          data.f_name.value = "",
+          data.l_name.value = "",
+          data.phone_no.value= "",
+          data.email.value= "",
+          data.company.value= "",
+          data.m_salary.value= "",
+          data.l_amount.value= ""
         } 
       else {
           Object.keys(data).map((item) => {
@@ -226,12 +233,10 @@ class Footer extends Component {
                         </div>
                     </Col>
                 </Row>
-                 <div className="popup-modal"><Modal  show={this.state.show} onHide={this.handleClose} animation={false}>
-                   
-          
-          <div>hello this is the modal</div>
-        </Modal>
-        </div>
+                 <div><Modal  className={footerStyles.popupModal} show={this.state.show} onHide={this.handleClose} animation={false}>
+                 <div>Information Send Sucessfully We Will Contact You Soon</div>
+                </Modal>
+                </div>
       
             </div>
 
