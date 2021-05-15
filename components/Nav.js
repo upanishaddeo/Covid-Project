@@ -15,7 +15,7 @@ const Nav = () => {
 
     return (
         <>
-            <div className="d-none d-lg-block">
+            <div className="d-none d-lg-block nav-shadow">
                 <nav className={styles.nav}>
                     <div className={styles.afinozLogo}>
                         <Link href='/'><Image src='/afinoz_logo.svg' width={150} height={90} /></Link>
