@@ -7,11 +7,11 @@ export const SidebarData = [
     },
     {
         title: 'RT-PCR',
-        path: '/rt-pcr'
+        path: '/rtp-cr-test-near-me'
     },
     {
         title: 'Plasma',
-        path: '/Plasma'
+        path: '/plasma'
     },
     {
         title: 'Oxygen',

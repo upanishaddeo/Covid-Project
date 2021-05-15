@@ -1,10 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
 html,
 body {
   overflow-x: hidden;
+  width: 100vw;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #4444c4;
+    
+    box-shadow: -3px 0px 20px 12px rgb(160 175 249);
+}
+::-webkit-scrollbar-track{
+    box-shadow: 0 0 6px rgba(0 0 0 / 40%);
 }
 
 a {
@@ -16,8 +31,14 @@ a {
   box-sizing: border-box;
 }
 
-
-
+.nav-shadow{
+  box-shadow: 0px -5px 20px -2px rgb(0 0 0 / 60%);
+    z-index: 1;
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    height: 80px;
+}
 
 .full-width-height {
   height: 100vh;
@@ -31,20 +52,74 @@ a {
 }
 
 .covid-map {
-  width:1150px;
+  width: 1529px;
+    color: white;
+    position: absolute;
+    right: -414px;
+    top: 210px;
+}
+
+.rsm-geography path{
+  fill: #5ac1b9;
 }
 
 .covid-container {
-  background: url("../public/covid-upper.png");
-  width: 1275px;
-  height: 500px;
- 
-
+  background: url("../public/covivdBack.jpg");
+  background-size: cover;
+  width: 100vw !important;
+  margin-top: 80px !important;
+  height: 700px !important;
 }
 
-.country-data ul  {
-  
- 
+.firstScreenHeading h1{
+  color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 27px;
+    font-size: 35px;
+}
+
+.firstScreenHeading h1 span{
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+}
+.dataList li {
+  font-size: 15px;
+}
+
+.dataList li span{
+  float: right;
+  font-weight: 600;
+}
+
+.dataCovid {
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  width: 30% !important;
+  margin: 0px 0px 0px 89px;
+  padding: 20px;
+  /* text-align: center; */
+  border-radius: 10px;
+  box-shadow: 11px 8px 17px 0px rgb(86 86 86 / 25%) inset, -7px -8px 19px 1px rgb(93 91 91 / 25%) inset;
+}
+.tooltip{
+  background-color: white;
+  color: blue;
+  font-size: 17px !important;
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif !important;
+}
+.dataCovid ul {
+  list-style: none;
+    padding: 20px;
+}
+
+.country-data{
+  color: rgb(68, 68, 196);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
 }
 
 .no-margin {
@@ -66,9 +141,44 @@ a {
 .mt16 {
   margin-top: 16px;
 }
-.pincode{
-  border: 2px solid red;
-    width: 30%;
+/* Fundraiser Section CSS */
+
+.firstPageSecRow {
+      padding: 100px 0px;
+      align-items: center;
+      width: 100vw;
+}
+.secSecHeading h1{
+  font-family: 'Poppins', sans-serif;
+  color: rgb(68, 68, 196);
+}
+.secSecHeading{
+    text-align: center;
+    margin-top: -60px !important;
+    margin-bottom: 60px;
+}
+.secSecHeading p{
+  font-family: 'Poppins', sans-serif;
+  color: rgb(68, 68, 196);
 }
 
 
+.secRowFirstCol {
+justify-content: center;
+display: flex;
+margin-left: 100px;
+}
+.secRowSecCol {
+display: flex;
+padding: 0px;
+justify-content: center;
+}
+.secRowThirdCol {
+display: flex;
+justify-content: center;
+margin-right: 100px;
+}
+
+.divRow{
+  width: 50% !important;
+}
