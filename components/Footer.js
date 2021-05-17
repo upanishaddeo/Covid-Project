@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col , Spinner} from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal'
+import Modal from 'react-bootstrap/Modal';
+import axios from "axios";
 import footerStyles from '../styles/Home.module.css';
 import { Regex } from "../components/utility";
 
@@ -103,7 +104,6 @@ class Footer extends Component {
             data[name].error = "";
           }
         }
-        console.log("kkkkkkkk",data)
       };
 
       //*Form Submmit
@@ -136,11 +136,45 @@ class Footer extends Component {
         }
     
         if (validate() && fillValue()) {
-          
-         alert("data upload sucessfully")
-          this.setState({loader:true})
-          this.handleShow()
-        } else {
+        this.setState({loader:true})
+        fetch("http://13.127.98.247:8080/api/", {
+         method: "post",
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+              
+          },
+
+          body: JSON.stringify({
+            f_name: data.f_name.value,
+            l_name: data.l_name.value,
+            mobile_number: data.phone_no.value,
+            email: data.email.value,
+            company_name: data.company.value,
+            monthly_salary: data.m_salary.value,
+            loan_amount: data.l_amount.value
+          })
+
+      })
+       
+          .then((response) => {
+            if(response){
+              
+              this.setState({loader:false})
+            console.log("this is the response",response)
+            
+          setTimeout(() => {
+            this.handleShow();
+          }, 500);
+          data.f_name.value = "",
+          data.l_name.value = "",
+          data.phone_no.value= "",
+          data.email.value= "",
+          data.company.value= "",
+          data.m_salary.value= "",
+          data.l_amount.value= ""
+        } 
+      else {
           Object.keys(data).map((item) => {
             if (
               (data[item].error == "" || data[item].error == null) &&
@@ -150,10 +184,14 @@ class Footer extends Component {
               data[item].error = "*Required";
             }
           });
-    
+        
           this.setState(data);
         }
-      };
+      
+      })
+    }
+  }
+    
 
 
 
@@ -195,12 +233,10 @@ class Footer extends Component {
                         </div>
                     </Col>
                 </Row>
-                 <div className="popup-modal"><Modal  show={this.state.show} onHide={this.handleClose} animation={false}>
-                   
-          
-          <div>hello this is the modal</div>
-        </Modal>
-        </div>
+                 <div><Modal  className={footerStyles.popupModal} show={this.state.show} onHide={this.handleClose} animation={false}>
+                 <div>Information Send Sucessfully We Will Contact You Soon</div>
+                </Modal>
+                </div>
       
             </div>
 
