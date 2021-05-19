@@ -2,24 +2,12 @@ import React from 'react'
 
 export const SidebarData = [
     {
-        title: 'Corona Virus Home Remedies',
-        path: '/corona-virus-home-remedies'
-    },
-    {
         title: 'RT-PCR',
-        path: '/rtp-cr-test-near-me'
+        path: '/rt-pcr-test-near-me'
     },
     {
-        title: 'Plasma',
-        path: '/plasma'
-    },
-    {
-        title: 'Oxygen',
-        path: '/oxygen'
-    },
-    {
-        title: 'Covid-19 Admission',
-        path: '/Covid-19-admission'
+        title: 'Oxygen Beds',
+        path: '/oxygen-beds'
     }
 ]
 

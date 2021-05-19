@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
+.oxyContainer {
+    margin-top: 80px;
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.oxyMainRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.oxyCardRow{
+    display: flex;
+    flex-direction: row;
+}
+.oxyCardMain{
+    display: flex;
+    flex-direction: column;
+    width: 287px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 18px 20px 18px 20px;
+    margin: 20px 70px 20px 70px;
+    -webkit-box-shadow: -1px 2px 13px #9dacff;
+    box-shadow: -1px 2px 13px #9dacff;
+}
+.oxyHeading h1{
+    font-size: 20px;
+    color: rgb(68, 68, 196);
+}
+.oxyHeading h1 span{
+    font-size: 20px;
+    color: rgb(68, 68, 196);
+    font-weight: 600;
+}
+.oxyCardHeading p{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(68, 68, 196);
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+.oxyCardData p{
+    font-size: 18px;
+}
+.oxyDescription h1{
+    font-size: 25px;
+    color: rgb(68, 68, 196);
+}
+.oxyDescription p{
+    color: rgb(73, 73, 73);
+}
+
+@media (max-width: 600px) {
+
+    .oxyContainer {
+        margin-top: 0px;
+        display: flex;
+        padding-top: 20px;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 50px;
+        align-items: center;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        width: 100vw;
+    }
+    
+    .oxyMainRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .oxyCardRow{
+        display: flex;
+        flex-direction: column;
+    }
+    .oxyCardMain{
+        display: flex;
+        flex-direction: column;
+        width: 364px;
+        background-color: #ffffff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 18px 20px 18px 20px;
+        box-shadow: -1px 2px 13px #9dacff;
+    }
+    .oxyHeading h1{
+        font-size: 20px;
+        color: rgb(68, 68, 196);
+    }
+    .oxyHeading h1 span{
+        font-size: 20px;
+        color: rgb(68, 68, 196);
+        font-weight: 600;
+    }
+    .oxyCardHeading p{
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(68, 68, 196);
+        border-bottom: 1px solid rgb(208, 208, 208);
+    }
+    .oxyCardData p{
+        font-size: 18px;
+    }
+    .oxyDescription h1{
+        font-size: 25px;
+        color: rgb(68, 68, 196);
+    }
+    .oxyDescription p{
+        color: rgb(73, 73, 73);
+        padding: 0px 60px 0px 60px;
+    }
+  }

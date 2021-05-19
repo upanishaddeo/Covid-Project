@@ -11,12 +11,16 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 ::-webkit-scrollbar{
-  width: 8px;
+  width: 12px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #4444c4;
-    
+    background-color: #28284f;
     box-shadow: -3px 0px 20px 12px rgb(160 175 249);
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #4444c4;
+  width: 12px;
+  box-shadow: -3px 0px 20px 12px rgb(160 175 249);
 }
 ::-webkit-scrollbar-track{
     box-shadow: 0 0 6px rgba(0 0 0 / 40%);
@@ -53,7 +57,7 @@ a {
 
 .covid-map {
   width: 1529px;
-    color: white;
+    color: #ffffff;
     position: absolute;
     right: -414px;
     top: 210px;
@@ -181,4 +185,76 @@ margin-right: 100px;
 
 .divRow{
   width: 50% !important;
+}
+
+
+@media (max-width: 600px) {
+  .covid-container{
+    background: url("../public/covivdBack.jpg");
+    background-size: cover;
+    width: 100vw !important;
+    margin-top: -14px !important;
+    height: 980px !important;
+  }
+  .dataCovid{
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    width: 100% !important;
+    margin: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 11px 8px 17px 0px rgb(86 86 86 / 25%) inset, -7px -8px 19px 1px rgb(93 91 91 / 25%) inset;
+  }
+  .covid-map{
+    width: 1295px;
+    color: #ffffff;
+    position: relative;
+    top: 0px;
+    left: -503px;
+  }
+  .firstPageSecRow{
+    padding: 100px 0px;
+    align-items: center;
+    width: 100vw;
+    display: flex !important;
+    flex-direction: column;
+    margin: 0px;
+    align-items: center !important;
+    justify-content: center;
+  }
+  .secSecHeading{
+    text-align: center;
+    margin-top: -60px !important;
+    margin-bottom: 40px;
+  }
+  .secSecHeading h1{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(68, 68, 196);
+    padding: 0px 20px 0px 20px;
+  }
+  .secSecHeading p{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(42 42 42);
+    padding: 0px 10px 0px 10px;
+    font-size: 20px;
+  }
+  .secRowFirstCol{
+    justify-content: center;
+    display: flex;
+    padding: 0px !important;
+    margin-bottom: 40px !important;
+    margin-left: 0px !important;
+  }
+  .secRowSecCol{
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    margin-bottom: 40px !important;
+  }
+  .secRowThirdCol{
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+  }
 }
