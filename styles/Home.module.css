@@ -134,8 +134,8 @@
 
 }
 
-.modal-content {
-  
+.popupModal {
+  height:200px!important;
 }
 .secPageMargin{
   margin: 50px 0px;
