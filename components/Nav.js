@@ -25,7 +25,7 @@ const Nav = () => {
                             <div>
                                 <li key={index} className={styles.navText} >
                                     <Link href={item.path}>
-                                        <span className={styles.spanTitle}>{item.title} {item.icon} <FontAwesomeIcon className={styles.iconColor} icon={faAngleDown} /></span>
+                                        <span className={styles.spanTitle}>{item.title} {item.icon} <FontAwesomeIcon className={styles.iconColor} icon={faAngleDown} /> Hello</span>
                                     </Link>
                                 </li>
                             </div>
